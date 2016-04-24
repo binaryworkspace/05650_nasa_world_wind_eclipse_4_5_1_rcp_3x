@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.binaryworkspace.rcp.wwj.Application">
+         </run>
+      </application>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.binaryworkspace.rcp.wwj.preferences.PreferencePage"
+            id="com.binaryworkspace.rcp.wwj.preferences.PreferencePage"
+            name="NASA World Wind">
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.binaryworkspace.rcp.wwj.perspectives.Perspective"
+            id="com.binaryworkspace.rcp.wwj.perspectives.Perspective"
+            name="OpenGL Perspective">
+      </perspective>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.LayerSelectionView"
+            id="com.binaryworkspace.rcp.wwj.views.LayerSelectionView"
+            name="Layer Selection View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.ElevationContoursView"
+            id="com.binaryworkspace.rcp.wwj.views.ElevationContoursView"
+            name="Elevation Contours View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.SurfacePathView"
+            id="com.binaryworkspace.rcp.wwj.views.SurfacePathView"
+            name="Surface Path View"
+            restorable="true">
+      </view>
+            <view
+            class="com.binaryworkspace.rcp.wwj.views.ElevatedPathView"
+            id="com.binaryworkspace.rcp.wwj.views.ElevatedPathView"
+            name="Elevated Path View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.PointRandomizationView"
+            id="com.binaryworkspace.rcp.wwj.views.PointRandomizationView"
+            name="Point Randomization View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.PointTessellationView"
+            id="com.binaryworkspace.rcp.wwj.views.PointTessellationView"
+            name="Point Tessellation View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.SurfacePolygonsView"
+            id="com.binaryworkspace.rcp.wwj.views.SurfacePolygonsView"
+            name="Surface Polygon View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.SurfaceImageView"
+            id="com.binaryworkspace.rcp.wwj.views.SurfaceImageView"
+            name="Surface Image View"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.wwj.views.SurfaceImageEditorView"
+            id="com.binaryworkspace.rcp.wwj.views.SurfaceImageEditorView"
+            name="Surface Image Editor View"
+            restorable="true">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+         </menu>
+         <menu
+               label="Window">
+            <command
+                  commandId="org.eclipse.ui.window.preferences"
+                  label="Preferences">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.binaryworkspace.rcp.wwj.application"
+            name="Binary Workspace - 05650 Eclipse RCP 3.x (4.5.1) - WWJ (2.0.0)">
+         <property
+               name="appName"
+               value="Binary Workspace - 05650 Eclipse RCP 3.x (4.5.1) - WWJ (2.0.0)">
+         </property>
+      </product>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.services">
+      <serviceFactory
+            factoryClass="com.binaryworkspace.rcp.wwj.services.WWJServiceFactory">
+         <service
+               serviceClass="com.binaryworkspace.rcp.wwj.services.WWJService"></service>
+      </serviceFactory>
+   </extension>
+
+</plugin>

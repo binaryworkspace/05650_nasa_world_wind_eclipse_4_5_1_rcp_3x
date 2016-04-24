@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Binary Workspace - 05650 Eclipse RCP 3.x (4.5.1) - WWJ (2.0.0)
+Bundle-SymbolicName: com.binaryworkspace.rcp.wwj;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.binaryworkspace.rcp.wwj.Activator
+Bundle-Vendor: Binary Workspace
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.jogamp.jogl.2.1.5.plugin;bundle-version="2.1.5",
+ gov.nasa.worldwind.2.0.0.plugin;bundle-version="2.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
